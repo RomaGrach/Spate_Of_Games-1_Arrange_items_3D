@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class CleverSceneGameManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CleverSceneGameManager : MonoBehaviour
     public int NOPL; // оставшееся количество пар
     public int WinNum;
     public List<GameObject> AI = new List<GameObject> { };
+    
 
 
 
@@ -38,12 +40,17 @@ public class CleverSceneGameManager : MonoBehaviour
         public Transform[] PointArray;
     }
 
-    
+
+    public GameObject CanvasWin;
+    public GameObject CanvasLose;
+    bool start = false;
+    float timer1;
 
     // Start is called before the first frame update
     void Start()
     {
         GenerateGame(10, 0, 0);
+        start = true;
     }
 
     // Update is called once per frame
@@ -69,6 +76,45 @@ public class CleverSceneGameManager : MonoBehaviour
 
             }
         }
+
+        if(CanvasWin != null && WinNum == 0 && start)
+        {
+            CanvasWin.SetActive(true);
+        }
+
+        timer1 += Time.deltaTime;
+
+        if (CanvasLose != null && WinNum > 0 && start)
+        {
+            bool ful = true;
+            foreach (ShelfsItemsArray waw in SIA)
+            {
+                int size = 0;
+                foreach (GameObject obj in waw.S.GetComponent<CleverShelf>().IW[0].Items)
+                {
+                    if(obj != waw.S.GetComponent<CleverShelf>().space)
+                    {
+                        size += 1;
+                    }
+                }
+                if (size != waw.S.GetComponent<CleverShelf>().Size)
+                {
+                    ful = false;
+                }
+            }
+            if (ful)
+            {
+                CanvasLose.SetActive(true);
+            }
+           
+        }
+
+
+    }
+
+    public void DemoResetGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void GetItemBack()
