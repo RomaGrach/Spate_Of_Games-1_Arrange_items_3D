@@ -344,6 +344,7 @@
 "Assets/CleverSceneGameManager.cs"
 "Assets/CleverShelf.cs"
 "Assets/CleverShelfSpaceManager.cs"
+"Assets/mainMenue1.cs"
 "Assets/New Folder/Rotate.cs"
 "Assets/Progress.cs"
 "Assets/SceneGameManager.cs"

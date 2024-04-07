@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class wheel : MonoBehaviour
@@ -15,6 +16,9 @@ public class wheel : MonoBehaviour
     public GameObject Effect;
 
     public GameObject point;
+
+    public GameObject CanBef;
+    public GameObject CanAfter;
 
     bool spin = false;
 
@@ -34,11 +38,12 @@ public class wheel : MonoBehaviour
 
     public void arrange()
     {
+        CanBef.SetActive(false);
         for (int k = 0; k < pose.Length; k++)
         {
 
             int a = Random.Range(0, ItemsBase.Count);
-            while (NowItems.IndexOf(a) == null)
+            while (NowItems.IndexOf(a) != -1)
             {
                 a = Random.Range(0, ItemsBase.Count);
             }
@@ -64,8 +69,19 @@ public class wheel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrange();
+        CanBef.SetActive(true);
+        CanAfter.SetActive(false);
+        
     }
+
+    public void OpenScen()
+    {
+        Progress.Instance.NextScen();
+    }
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -88,6 +104,9 @@ public class wheel : MonoBehaviour
 
         }
         Instantiate(Effect, pose[posMin].transform.position, pose[posMin].transform.rotation);
+        CanBef.SetActive(false);
+        CanAfter.SetActive(true);
+        Progress.Instance.PlayerInfo.Scen = NowItems[posMin];
     }
 
     private void FixedUpdate()

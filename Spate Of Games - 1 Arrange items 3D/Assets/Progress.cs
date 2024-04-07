@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,8 +21,7 @@ public class Progress : MonoBehaviour
     public static Progress Instance;
     public PlayerInfo PlayerInfo;
 
-    public int nowScen = Instance.PlayerInfo.Scen;
-    public bool Chenjd = false;
+    
 
     private void Awake()
     {
@@ -65,7 +65,7 @@ public class Progress : MonoBehaviour
                 Instance.PlayerInfo.Chenjd = false;
             }
             
-            SceneManager.LoadScene(2 + Instance.PlayerInfo.level % 5);
+            SceneManager.LoadScene(2 + Instance.PlayerInfo.Scen);
         }
     }
 }

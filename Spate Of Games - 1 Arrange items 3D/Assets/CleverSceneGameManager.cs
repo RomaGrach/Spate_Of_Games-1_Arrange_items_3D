@@ -59,7 +59,16 @@ public class CleverSceneGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateGame(10 +Progress.Instance.PlayerInfo.level % 5 *3 , 0, 0);
+        int numd;
+        if(Progress.Instance.PlayerInfo.level % 5 == 0)
+        {
+            numd = 10 + 5 * 3;
+        }
+        else
+        {
+            numd = 10 + Progress.Instance.PlayerInfo.level % 5 * 3;
+        }
+        GenerateGame(numd, 0, 0);
         start = true;
     }
 
