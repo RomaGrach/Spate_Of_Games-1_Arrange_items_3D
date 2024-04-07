@@ -1,4 +1,5 @@
 
+
 using System.Collections;
 using System.Collections.Generic;
 
@@ -41,6 +42,15 @@ public class CleverSceneGameManager : MonoBehaviour
     }
 
 
+    [System.Serializable]
+    public class forChek
+    {
+        public int itm;
+        public int num;
+    }
+
+
+
     public GameObject CanvasWin;
     public GameObject CanvasLose;
     bool start = false;
@@ -49,7 +59,7 @@ public class CleverSceneGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateGame(10, 0, 0);
+        GenerateGame(10 +Progress.Instance.PlayerInfo.level % 5 *3 , 0, 0);
         start = true;
     }
 
@@ -80,6 +90,7 @@ public class CleverSceneGameManager : MonoBehaviour
         if(CanvasWin != null && WinNum == 0 && start)
         {
             CanvasWin.SetActive(true);
+            Progress.Instance.PlayerInfo.level += 1;
         }
 
         timer1 += Time.deltaTime;
@@ -106,7 +117,55 @@ public class CleverSceneGameManager : MonoBehaviour
             {
                 CanvasLose.SetActive(true);
             }
-           
+
+            bool no = true;
+            
+
+            List<int> itm = new List<int>();
+            List<int> num = new List<int>();
+            int Bigsize = 0;
+            int Fullsize = 0;
+            int Onesize = 0;
+            foreach (ShelfsItemsArray waw in SIA)
+            {
+                
+                foreach (GameObject obj in waw.S.GetComponent<CleverShelf>().IW[0].Items)
+                {
+                    if (obj != waw.S.GetComponent<CleverShelf>().space)
+                    {
+                        Bigsize += 1;
+                        if (itm.IndexOf(obj.GetComponent<CleverItem>().index) != -1)
+                        {
+                            int qwe = itm.IndexOf(obj.GetComponent<CleverItem>().index);
+                            
+                            num[qwe] += 1;
+                        }
+                        else
+                        {
+                            itm.Add(obj.GetComponent<CleverItem>().index);
+                            num.Add(1);
+                        }
+                    }
+                }
+                Onesize = waw.S.GetComponent<CleverShelf>().Size;
+                Fullsize += waw.S.GetComponent<CleverShelf>().Size;
+            }
+            
+            foreach (int fgj in num)
+            {
+                if(fgj >= Onesize)
+                {
+                    no = false;
+                }
+                
+            }
+            
+
+            if (no && (Fullsize - Onesize) < Bigsize)
+            {
+                CanvasLose.SetActive(true);
+            }
+
         }
 
 
