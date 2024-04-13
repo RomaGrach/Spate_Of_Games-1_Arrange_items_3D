@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class CleverSceneGameManager : MonoBehaviour
 {
@@ -50,9 +51,15 @@ public class CleverSceneGameManager : MonoBehaviour
     }
 
 
-
+    bool win = false;
     public GameObject CanvasWin;
     public GameObject CanvasLose;
+    public GameObject[] CanvasPoints;
+    public GameObject CanvasSettings;
+    public GameObject CanvasButtonSettings;
+    public GameObject wall;
+    [SerializeField] TextMeshProUGUI ScoreText;
+
     bool start = false;
     float timer1;
 
@@ -60,16 +67,42 @@ public class CleverSceneGameManager : MonoBehaviour
     void Start()
     {
         int numd;
-        if(Progress.Instance.PlayerInfo.level % 5 == 0)
+        int Shelff;
+        int av;
+        ScoreText.text = Progress.Instance.PlayerInfo.level.ToString();
+        //Progress.Instance.ResetSave();
+        if (Progress.Instance.PlayerInfo.level % 5 == 0)
         {
-            numd = 10 + 5 * 3;
+            numd = 7 + 5 * 3;
+            av = 5;
         }
         else
         {
-            numd = 10 + Progress.Instance.PlayerInfo.level % 5 * 3;
+            numd = 7 + Progress.Instance.PlayerInfo.level % 5 * 3;
+            av = Progress.Instance.PlayerInfo.level % 5;
         }
-        GenerateGame(numd, 0, 0);
+        if (numd > 12)
+        {
+            numd = 7 + 5 * 3;
+            Shelff = Random.Range(6, PSA.Length);
+        }
+        else
+        {
+            Shelff = Random.Range(0, 6);
+        }
+
+        GenerateGame(numd, Shelff, 0);
         start = true;
+
+        
+
+        
+
+        for (int k = 0; k < av; k++)
+        {
+            CanvasPoints[k].SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
@@ -96,10 +129,11 @@ public class CleverSceneGameManager : MonoBehaviour
             }
         }
 
-        if(CanvasWin != null && WinNum == 0 && start)
+        if(!win && WinNum == 0 && start)
         {
-            CanvasWin.SetActive(true);
-            Progress.Instance.PlayerInfo.level += 1;
+            //CanvasWin.SetActive(true);
+            Win();
+            //Progress.Instance.PlayerInfo.level += 1;
         }
 
         timer1 += Time.deltaTime;
@@ -124,7 +158,8 @@ public class CleverSceneGameManager : MonoBehaviour
             }
             if (ful)
             {
-                CanvasLose.SetActive(true);
+                //CanvasLose.SetActive(true);
+                loose();
             }
 
             bool no = true;
@@ -172,10 +207,81 @@ public class CleverSceneGameManager : MonoBehaviour
 
             if (no && (Fullsize - Onesize) < Bigsize)
             {
-                CanvasLose.SetActive(true);
+                //CanvasLose.SetActive(true);
+                loose();
             }
 
         }
+
+
+    }
+
+    public void Pause()
+    {
+        if(CanvasSettings.activeSelf == false)
+        {
+            CanvasSettings.SetActive(true);
+        }
+        else
+        {
+            CanvasSettings.SetActive(false);
+        }
+
+        if (wall.activeSelf == false)
+        {
+            wall.SetActive(true);
+        }
+        else
+        {
+            wall.SetActive(false);
+        }
+
+        /*
+        CanvasSettings.SetActive(!CanvasSettings.activeSelf);
+        //CanvasButtonSettings.SetActive(true);
+        wall.SetActive(!CanvasSettings.activeSelf);
+        */
+
+    }
+
+    
+
+    public void ReloadScen()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+    }
+
+
+    public void NextScen()
+    {
+
+        Progress.Instance.NextScen();
+
+    }
+
+
+    public void Win()
+    {
+        CanvasWin.SetActive(true);
+        CanvasLose.SetActive(false);
+        CanvasSettings.SetActive(false);
+        CanvasButtonSettings.SetActive(false);
+        wall.SetActive(true);
+        Progress.Instance.PlayerInfo.level += 1;
+        win = true;
+
+    }
+
+    public void loose()
+    {
+        CanvasWin.SetActive(false);
+        CanvasLose.SetActive(true);
+        CanvasSettings.SetActive(false);
+        CanvasButtonSettings.SetActive(false);
+        wall.SetActive(true);
 
 
     }
@@ -229,8 +335,8 @@ public class CleverSceneGameManager : MonoBehaviour
         WinNum = NOP;
         for (int k = 0; k < PSA[SLN].PointArray.Length; k++)
         {
-            int RS = Random.Range(0, PSA.Length);
-            GameObject now = Instantiate(ShelfsBase[SO], PSA[RS].PointArray[k].position, PSA[RS].PointArray[k].rotation);
+            //int RS = Random.Range(0, PSA.Length);
+            GameObject now = Instantiate(ShelfsBase[SO], PSA[SLN].PointArray[k].position, PSA[SLN].PointArray[k].rotation);
             SIA.Add(new ShelfsItemsArray());
             SIA[k].S = now;
         }

@@ -227,6 +227,7 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
 struct OpenAuthorizationDialog_t05A5975254F1E4A036D705FF956AC9438199820A;
 struct PaymentsCatalogYG_tAC5A646BE3F63982C37ABDB04B96693AC2CB39CA;
 struct PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25;
+struct PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223;
 struct PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB;
 struct PromptYG_t408FEFE9F5D719F30F9A3F8258B62FF996FFE38D;
 struct Purchase_t859B152B4AF0305E98A6623782F399E7494C61A2;
@@ -356,6 +357,7 @@ IL2CPP_EXTERN_C RuntimeClass* MonoBehaviourU5BU5D_tEB91860B3CEE2D63A7833A2842EB9
 IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PurchaseU5BU5D_tDDE24A92336247162CAC72DDA6A0F860FF00106C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PurchaseYGU5BU5D_t3570220F31227C2B339D7AC997BFB2AEB1DE7719_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Purchase_t859B152B4AF0305E98A6623782F399E7494C61A2_il2cpp_TypeInfo_var;
@@ -816,6 +818,12 @@ struct LBThisPlayerData_t1ACBAA2135255CE7E1B2A428CA4D3C160DF4E752  : public Runt
 struct MemberInfo_t  : public RuntimeObject
 {
 };
+struct PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223  : public RuntimeObject
+{
+	int32_t ___level;
+	int32_t ___Scen;
+	bool ___Chenjd;
+};
 struct Purchase_t859B152B4AF0305E98A6623782F399E7494C61A2  : public RuntimeObject
 {
 	String_t* ___id;
@@ -834,6 +842,7 @@ struct SavesYG_t690242EAB4C593E9C244E68284769CCC625E95BA  : public RuntimeObject
 	int32_t ___money;
 	String_t* ___newPlayerName;
 	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___openLevels;
+	PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223* ___PlayerInfo;
 };
 struct String_t  : public RuntimeObject
 {
@@ -4482,6 +4491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void YandexMetrica_Send_m8230AD0B4B1663419144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtils_ToJson_m3E3F70313FB40E96BD8EDE934F5F4FA593F5C622 (RuntimeObject* ___0_dictionary, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool YandexMetrica_YandexMetricaSendInternal_mAA079F57DBE98A1F8C4D9197E56D53BA2AE0BE3E (String_t* ___0_eventName, String_t* ___1_eventData, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerInfo__ctor_m8ED3F2D1B7789917E0A65CEB89D94F10D834E180 (PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A TimeSpan_FromMilliseconds_mFDCBE9EDA3F6743302C3DD81259AF5D2F00EF775 (double ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TimeSpan_ToString_m5B50613FCD29547F04EAE305B2226CB9F490C432 (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, String_t* ___0_format, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* LangMethods_UnauthorizedTextTranslate_m56D0F3D3CA591BD4A7C3D4B85878C88E3778B22D (String_t* ___0_languageTranslate, const RuntimeMethod* method) ;
@@ -10944,6 +10954,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SavesYG__ctor_mED5121897A503A13E6AF36F6A
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1A42D4129737B9D8C1DEE75879B6AA83C8F74D22);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC295AE7F3D676E2CAA3DE0DC641EF335E57A2E37);
 		s_Il2CppMethodInitialized = true;
@@ -10958,9 +10969,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SavesYG__ctor_mED5121897A503A13E6AF36F6A
 		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_0 = (BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4*)(BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4*)SZArrayNew(BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4_il2cpp_TypeInfo_var, (uint32_t)3);
 		__this->___openLevels = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___openLevels), (void*)L_0);
+		PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223* L_1 = (PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223*)il2cpp_codegen_object_new(PlayerInfo_tC66DD3EB75091432EAF7085658AC2B0065A41223_il2cpp_TypeInfo_var);
+		PlayerInfo__ctor_m8ED3F2D1B7789917E0A65CEB89D94F10D834E180(L_1, NULL);
+		__this->___PlayerInfo = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___PlayerInfo), (void*)L_1);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_1 = __this->___openLevels;
-		(L_1)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (bool)1);
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_2 = __this->___openLevels;
+		(L_2)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (bool)1);
 		return;
 	}
 }

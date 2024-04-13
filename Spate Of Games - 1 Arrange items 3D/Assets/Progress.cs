@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 [System.Serializable]
 public class PlayerInfo
@@ -42,7 +42,7 @@ public class Progress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Progress.Instance.PlayerInfo = YandexGame.savesData.PlayerInfo;
     }
 
     // Update is called once per frame
@@ -51,8 +51,19 @@ public class Progress : MonoBehaviour
         
     }
 
+    public void ResetSave()
+    {
+        Progress.Instance.PlayerInfo = new PlayerInfo();
+        YandexGame.savesData.PlayerInfo = Progress.Instance.PlayerInfo;
+        YandexGame.SaveProgress();
+        
+    }
+
+
     public void NextScen()
     {
+        
+
         if (Instance.PlayerInfo.level%5 == 1 && !Instance.PlayerInfo.Chenjd)
         {
             SceneManager.LoadScene(1);
@@ -67,5 +78,7 @@ public class Progress : MonoBehaviour
             
             SceneManager.LoadScene(2 + Instance.PlayerInfo.Scen);
         }
+        YandexGame.savesData.PlayerInfo = Instance.PlayerInfo;
+        YandexGame.SaveProgress();
     }
 }

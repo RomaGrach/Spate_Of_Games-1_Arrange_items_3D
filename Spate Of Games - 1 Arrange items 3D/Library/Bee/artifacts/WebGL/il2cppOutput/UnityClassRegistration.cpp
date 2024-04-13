@@ -136,6 +136,7 @@ class Transform; template <> void RegisterUnityClass<Transform>(const char*);
 class ParticleSystem; template <> void RegisterUnityClass<ParticleSystem>(const char*);
 class ParticleSystemRenderer; template <> void RegisterUnityClass<ParticleSystemRenderer>(const char*);
 class BoxCollider; template <> void RegisterUnityClass<BoxCollider>(const char*);
+class CapsuleCollider; template <> void RegisterUnityClass<CapsuleCollider>(const char*);
 class Collider; template <> void RegisterUnityClass<Collider>(const char*);
 class MeshCollider; template <> void RegisterUnityClass<MeshCollider>(const char*);
 class PhysicsManager; template <> void RegisterUnityClass<PhysicsManager>(const char*);
@@ -151,7 +152,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 76 non stripped classes
+	//Total: 77 non stripped classes
 	//0. Animator
 	RegisterUnityClass<Animator>("Animation");
 	//1. AnimatorController
@@ -284,25 +285,27 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
 	//65. BoxCollider
 	RegisterUnityClass<BoxCollider>("Physics");
-	//66. Collider
+	//66. CapsuleCollider
+	RegisterUnityClass<CapsuleCollider>("Physics");
+	//67. Collider
 	RegisterUnityClass<Collider>("Physics");
-	//67. MeshCollider
+	//68. MeshCollider
 	RegisterUnityClass<MeshCollider>("Physics");
-	//68. PhysicsManager
+	//69. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//69. Rigidbody
+	//70. Rigidbody
 	RegisterUnityClass<Rigidbody>("Physics");
-	//70. SphereCollider
+	//71. SphereCollider
 	RegisterUnityClass<SphereCollider>("Physics");
-	//71. Font
+	//72. Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//72. TextMesh
+	//73. TextMesh
 	RegisterUnityClass<TextRenderingPrivate::TextMesh>("TextRendering");
-	//73. Canvas
+	//74. Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//74. CanvasGroup
+	//75. CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//75. CanvasRenderer
+	//76. CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
 
 }

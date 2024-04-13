@@ -521,7 +521,7 @@ static const int32_t s_InvokerIndices[181] =
 	5519,
 	5519,
 	5958,
-	7300,
+	7301,
 	0,
 	0,
 	0,
