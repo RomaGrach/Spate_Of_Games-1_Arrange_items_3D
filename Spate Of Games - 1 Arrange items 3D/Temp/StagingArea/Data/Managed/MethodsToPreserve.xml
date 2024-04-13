@@ -1,0 +1,49 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="CleverSceneGameManager">
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="DemoResetGame"/>
+			<method name="NextScen"/>
+			<method name="NextScen"/>
+			<method name="NextScen"/>
+			<method name="NextScen"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="ReloadScen"/>
+			<method name="Win"/>
+			<method name="Win"/>
+			<method name="Win"/>
+			<method name="Win"/>
+		</type>
+		<type fullname="mainMenue1">
+			<method name="OpenScen"/>
+			<method name="OpenScen"/>
+			<method name="OpenScen"/>
+			<method name="OpenScen"/>
+			<method name="OpenScen"/>
+		</type>
+		<type fullname="wheel">
+			<method name="arrange"/>
+			<method name="OpenScen"/>
+		</type>
+	</assembly>
+</linker>
