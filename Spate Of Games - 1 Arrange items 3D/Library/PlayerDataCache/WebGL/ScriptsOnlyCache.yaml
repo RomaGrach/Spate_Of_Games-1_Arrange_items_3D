@@ -114,6 +114,9 @@ ScriptsOnlyBuild:
     fullTypeName: mainMenue1
     methodName: OpenScen
   - assembly: Assembly-CSharp
+    fullTypeName: Progress
+    methodName: ResetSave
+  - assembly: Assembly-CSharp
     fullTypeName: wheel
     methodName: arrange
   - assembly: Assembly-CSharp
@@ -319,6 +322,8 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
@@ -2202,4 +2207,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/level1 2.unity
   - Assets/Scenes/level1 3.unity
   playerPath: /Users/romagrachev/uniti /Spate_Of_Games-1_Arrange_items_3D/Spate Of
-    Games - 1 Arrange items 3D/builds/biuld13
+    Games - 1 Arrange items 3D/builds/biuld14

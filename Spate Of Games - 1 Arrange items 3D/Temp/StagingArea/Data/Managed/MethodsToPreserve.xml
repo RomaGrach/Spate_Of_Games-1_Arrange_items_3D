@@ -41,6 +41,9 @@
 			<method name="OpenScen"/>
 			<method name="OpenScen"/>
 		</type>
+		<type fullname="Progress">
+			<method name="ResetSave"/>
+		</type>
 		<type fullname="wheel">
 			<method name="arrange"/>
 			<method name="OpenScen"/>
