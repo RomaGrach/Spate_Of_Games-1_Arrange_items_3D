@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638487083900000000
+      ticks: 638488004510000000
     m_Hash: 180934861
   m_LockFileStatus:
     m_FilePath: /Users/romagrachev/uniti /Spate_Of_Games-1_Arrange_items_3D/Spate
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638487083950000000
+      ticks: 638488004510000000
     m_Hash: 2493641485
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -1360,6 +1360,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -1379,6 +1380,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -4123,6 +4125,7 @@ m_ResolvedPackages:
     - 1.12.1
     - 1.12.2
     - 1.12.4
+    - 1.12.5
     compatible:
     - 1.10.1
     - 1.11.0
@@ -4130,6 +4133,7 @@ m_ResolvedPackages:
     - 1.12.1
     - 1.12.2
     - 1.12.4
+    - 1.12.5
     recommended: 1.10.1
     deprecated: []
   dependencies:
