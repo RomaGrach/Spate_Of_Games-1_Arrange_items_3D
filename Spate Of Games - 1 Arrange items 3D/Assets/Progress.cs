@@ -10,6 +10,7 @@ public class PlayerInfo
     public int level = 1;
     public int Scen = 0;
     public bool Chenjd = false;
+    public bool Sound = true;
 
 }
 
@@ -21,7 +22,17 @@ public class Progress : MonoBehaviour
     public static Progress Instance;
     public PlayerInfo PlayerInfo;
 
-    
+    void StopGame()
+    {
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
+    }
+
+    void PlayGame()
+    {
+        Time.timeScale = 1f;
+        AudioListener.volume = 1f;
+    }
 
     private void Awake()
     {
@@ -43,6 +54,10 @@ public class Progress : MonoBehaviour
     void Start()
     {
         Progress.Instance.PlayerInfo = YandexGame.savesData.PlayerInfo;
+        YandexGame.OpenFullAdEvent += StopGame;
+        YandexGame.CloseFullAdEvent += PlayGame;
+        YandexGame.OpenVideoEvent += StopGame;
+        YandexGame.CloseVideoEvent += PlayGame;
     }
 
     // Update is called once per frame
@@ -62,11 +77,12 @@ public class Progress : MonoBehaviour
 
     public void NextScen()
     {
-        
 
+        int scenToLoad;
         if (Instance.PlayerInfo.level%5 == 1 && !Instance.PlayerInfo.Chenjd)
         {
-            SceneManager.LoadScene(1);
+            scenToLoad = 1;
+            //SceneManager.LoadScene(1);
             Instance.PlayerInfo.Chenjd = true;
         }
         else 
@@ -75,10 +91,12 @@ public class Progress : MonoBehaviour
             {
                 Instance.PlayerInfo.Chenjd = false;
             }
-            
-            SceneManager.LoadScene(2 + Instance.PlayerInfo.Scen);
+            scenToLoad = 2 + Instance.PlayerInfo.Scen;
+            //SceneManager.LoadScene(2 + Instance.PlayerInfo.Scen);
         }
         YandexGame.savesData.PlayerInfo = Instance.PlayerInfo;
-        YandexGame.SaveProgress();
+        //YandexGame.SaveProgress();
+
+        SceneManager.LoadScene(scenToLoad);
     }
 }

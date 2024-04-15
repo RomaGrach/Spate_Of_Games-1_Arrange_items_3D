@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using YG;
 
 public class wheel : MonoBehaviour
 {
@@ -34,8 +36,12 @@ public class wheel : MonoBehaviour
     {
         public List<GameObject> Items; // предметы
     }
-
-
+    /*
+    private void OnDestroy()
+    {
+        YandexGame.RewardVideoEvent -= Reward;
+    }
+    */
     public void arrange()
     {
         CanBef.SetActive(false);
@@ -54,7 +60,7 @@ public class wheel : MonoBehaviour
 
         spin = true;
 
-        speed = Random.Range(0, Startspeed);
+        speed = Random.Range(30, Startspeed);
         /*
         // Движение по горизонтали и вертикали
         
@@ -71,7 +77,7 @@ public class wheel : MonoBehaviour
     {
         CanBef.SetActive(true);
         CanAfter.SetActive(false);
-        
+        YandexGame.RewardVideoEvent += Reward;
     }
 
     public void OpenScen()
@@ -79,9 +85,25 @@ public class wheel : MonoBehaviour
         Progress.Instance.NextScen();
     }
 
+    public void ReloadScen()
+    {
+        YandexGame.RewVideoShow(124);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+    public void ReloadScenAD()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+    void Reward(int id)
+    {
+        if (id == 124)
+        {
+            ReloadScenAD();
+        }
 
+    }
 
     // Update is called once per frame
     void Update()

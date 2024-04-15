@@ -12704,7 +12704,7 @@ IL_001c:
 		Type_t* L_6;
 		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
 		bool L_7;
-		L_7 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(21, L_4, L_6);
+		L_7 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(22, L_4, L_6);
 		V_1 = L_7;
 		bool L_8 = V_1;
 		if (!L_8)

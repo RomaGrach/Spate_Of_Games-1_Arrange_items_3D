@@ -77,3 +77,8 @@ crashlytics-build.properties
 *.zip
 *.dwlt
 *.asset
+
+**/*.a
+*.a
+Spate Of Games - 1 Arrange items 3D/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
+Spate Of Games - 1 Arrange items 3D/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a

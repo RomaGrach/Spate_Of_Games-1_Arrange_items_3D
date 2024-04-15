@@ -4,6 +4,7 @@
 		<type fullname="PlayerInfo" preserve="nothing" serialized="true"/>
 		<type fullname="SceneGameManagerNoWait/ItemBase" preserve="nothing" serialized="true"/>
 		<type fullname="SceneGameManagerNoWait/PointShelfsArrays" preserve="nothing" serialized="true"/>
+		<type fullname="Sounds/SoundArrays" preserve="nothing" serialized="true"/>
 		<type fullname="wheel/ItemWave" preserve="nothing" serialized="true"/>
 		<type fullname="YG.InfoYG/CSVTranslate" preserve="nothing" serialized="true"/>
 		<type fullname="YG.InfoYG/Fonts" preserve="nothing" serialized="true"/>

@@ -1,5 +1,5 @@
 {
-    "idSave": 50,
+    "idSave": 81,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,8 +11,9 @@
         false
     ],
     "PlayerInfo": {
-        "level": 1,
-        "Scen": 1,
-        "Chenjd": true
+        "level": 17,
+        "Scen": 2,
+        "Chenjd": true,
+        "Sound": true
     }
 }

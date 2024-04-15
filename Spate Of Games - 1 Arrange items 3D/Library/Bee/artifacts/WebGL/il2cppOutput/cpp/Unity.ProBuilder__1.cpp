@@ -20480,7 +20480,7 @@ IL_009a:
 		{
 			StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_26 = V_6;
 			String_t* L_27 = ___0_message;
-			VirtualActionInvoker1< String_t* >::Invoke(15, L_26, L_27);
+			VirtualActionInvoker1< String_t* >::Invoke(18, L_26, L_27);
 			goto IL_009b;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -20529,7 +20529,7 @@ IL_00c0:
 		{
 			StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_32 = V_7;
 			String_t* L_33 = ___0_message;
-			VirtualActionInvoker1< String_t* >::Invoke(15, L_32, L_33);
+			VirtualActionInvoker1< String_t* >::Invoke(18, L_32, L_33);
 			goto IL_00c1;
 		}
 		catch(Il2CppExceptionWrapper& e)

@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using TMPro;
+using YG;
 
 public class CleverSceneGameManager : MonoBehaviour
 {
@@ -63,9 +64,16 @@ public class CleverSceneGameManager : MonoBehaviour
     bool start = false;
     float timer1;
 
+    
+    private void OnDestroy()
+    {
+        YandexGame.RewardVideoEvent -= Reward;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
+        YandexGame.RewardVideoEvent += Reward;
         int numd;
         int Shelff;
         int av;
@@ -105,6 +113,15 @@ public class CleverSceneGameManager : MonoBehaviour
 
     }
 
+    void Reward(int id)
+    {
+        if (id == 1224)
+        {
+            WinAD();
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -132,7 +149,7 @@ public class CleverSceneGameManager : MonoBehaviour
         if(!win && WinNum == 0 && start)
         {
             //CanvasWin.SetActive(true);
-            Win();
+            WinAD();
             //Progress.Instance.PlayerInfo.level += 1;
         }
 
@@ -265,6 +282,7 @@ public class CleverSceneGameManager : MonoBehaviour
 
     public void Win()
     {
+        /*
         CanvasWin.SetActive(true);
         CanvasLose.SetActive(false);
         CanvasSettings.SetActive(false);
@@ -272,6 +290,22 @@ public class CleverSceneGameManager : MonoBehaviour
         wall.SetActive(true);
         Progress.Instance.PlayerInfo.level += 1;
         win = true;
+        */
+        YandexGame.RewVideoShow(1224);
+    }
+
+    public void WinAD()
+    {
+        CanvasWin.SetActive(true);
+        CanvasLose.SetActive(false);
+        CanvasSettings.SetActive(false);
+        CanvasButtonSettings.SetActive(false);
+        wall.SetActive(true);
+        Progress.Instance.PlayerInfo.level += 1;
+        win = true;
+        
+        YandexGame.NewLeaderboardScores("Score", Progress.Instance.PlayerInfo.level);
+        YandexGame.SaveProgress();
 
     }
 

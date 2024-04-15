@@ -5,6 +5,7 @@
 		<type fullname="CleverShelf" preserve="nothing"/>
 		<type fullname="CleverShelfSpaceManager" preserve="nothing"/>
 		<type fullname="mainMenue1" preserve="nothing"/>
+		<type fullname="PlayMusic" preserve="nothing"/>
 		<type fullname="Progress" preserve="nothing"/>
 		<type fullname="Rotate" preserve="nothing"/>
 		<type fullname="SceneGameManager" preserve="nothing"/>
@@ -12,6 +13,7 @@
 		<type fullname="ShelfManager" preserve="nothing"/>
 		<type fullname="ShelfSpaceManager" preserve="nothing"/>
 		<type fullname="SimpleCollectibleScript" preserve="nothing"/>
+		<type fullname="Sounds" preserve="nothing"/>
 		<type fullname="space" preserve="nothing"/>
 		<type fullname="wheel" preserve="nothing"/>
 		<type fullname="YG.InfoYG" preserve="nothing"/>
@@ -39,8 +41,10 @@
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
+		<type fullname="UnityEditor.UnityConnectSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>

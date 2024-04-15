@@ -20656,7 +20656,7 @@ IL_004c:
 		Type_t** L_24 = ___2_resEnumType;
 		Type_t* L_25 = *((Type_t**)L_24);
 		String_t* L_26;
-		L_26 = VirtualFuncInvoker0< String_t* >::Invoke(25, L_25);
+		L_26 = VirtualFuncInvoker0< String_t* >::Invoke(26, L_25);
 		ArrayElementTypeCheck (L_23, L_26);
 		(L_23)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_26);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);

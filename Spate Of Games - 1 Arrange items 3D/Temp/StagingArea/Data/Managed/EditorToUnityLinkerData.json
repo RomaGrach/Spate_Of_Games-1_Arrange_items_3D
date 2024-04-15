@@ -115,6 +115,20 @@
         },
         {
             "managedAssemblyName": "",
+            "nativeClass": "SampleClip",
+            "fullManagedTypeName": "",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/level1 1.unity",
+                "Assets/Scenes/level1 2.unity",
+                "Assets/Scenes/level1 3.unity",
+                "Assets/Scenes/level1.unity",
+                "Assets/Scenes/MainMenue1.unity",
+                "Assets/Scenes/Wheel.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
             "nativeClass": "ShaderNameRegistry",
             "fullManagedTypeName": "",
             "moduleName": "Core",
@@ -199,6 +213,13 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "UnityConnectSettings",
+            "fullManagedTypeName": "UnityEditor.UnityConnectSettings",
+            "moduleName": "UnityConnect",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "VFXManager",
             "fullManagedTypeName": "UnityEditor.VFXManager",
             "moduleName": "VFX",
@@ -208,6 +229,20 @@
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/level1 1.unity",
+                "Assets/Scenes/level1 2.unity",
+                "Assets/Scenes/level1 3.unity",
+                "Assets/Scenes/level1.unity",
+                "Assets/Scenes/MainMenue1.unity",
+                "Assets/Scenes/Wheel.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioClip",
+            "fullManagedTypeName": "UnityEngine.AudioClip",
             "moduleName": "Audio",
             "usedInScenes": [
                 "Assets/Scenes/level1 1.unity",
@@ -241,7 +276,9 @@
                 "Assets/Scenes/level1 1.unity",
                 "Assets/Scenes/level1 2.unity",
                 "Assets/Scenes/level1 3.unity",
-                "Assets/Scenes/level1.unity"
+                "Assets/Scenes/level1.unity",
+                "Assets/Scenes/MainMenue1.unity",
+                "Assets/Scenes/Wheel.unity"
             ]
         },
         {

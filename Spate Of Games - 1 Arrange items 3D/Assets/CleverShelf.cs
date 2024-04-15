@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CleverShelf : MonoBehaviour
@@ -88,6 +89,12 @@ public class CleverShelf : MonoBehaviour
                     {
                         Instantiate(efeect, place.transform.position, place.transform.rotation);
                     }
+
+                    if (Progress.Instance.PlayerInfo.Sound)
+                    {
+                        SGM.gameObject.GetComponent<Sounds>().PlayS();
+                    }
+                    
 
                     SGM.score += 1;
                     SGM.WinNum -= 1;

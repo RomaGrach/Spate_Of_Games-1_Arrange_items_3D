@@ -33,13 +33,19 @@
 			<method name="Win"/>
 			<method name="Win"/>
 			<method name="Win"/>
+			<method name="Win"/>
+			<method name="Win"/>
+			<method name="Win"/>
+			<method name="Win"/>
 		</type>
 		<type fullname="mainMenue1">
+			<method name="MusOnOf"/>
 			<method name="OpenScen"/>
 			<method name="OpenScen"/>
 			<method name="OpenScen"/>
 			<method name="OpenScen"/>
 			<method name="OpenScen"/>
+			<method name="ReRotate"/>
 		</type>
 		<type fullname="Progress">
 			<method name="ResetSave"/>
@@ -47,6 +53,7 @@
 		<type fullname="wheel">
 			<method name="arrange"/>
 			<method name="OpenScen"/>
+			<method name="ReloadScen"/>
 		</type>
 	</assembly>
 </linker>
