@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: dbdfc6e7bd1b51248a63f46662c4dee7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44970715, g: 0.49977517, b: 0.57563233, a: 1}
+  m_IndirectSpecularColor: {r: 0.32472533, g: 0.29541335, b: 0.32294887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -495,6 +495,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843430780680070685, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1831925131298765579, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
       propertyPath: score
       value: 0
@@ -579,9 +583,17 @@ PrefabInstance:
       propertyPath: ItemsBase.Array.data[18]
       value: 
       objectReference: {fileID: 1037343330875508, guid: a3a521ec9e61347e398c948047ab28c5, type: 3}
+    - target: {fileID: 2210222670547112409, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4860991249618001160, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
       propertyPath: m_Name
       value: SceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363205897598642663, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5719486905030633212, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -622,6 +634,14 @@ PrefabInstance:
     - target: {fileID: 5719486905030633212, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418521900870871807, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522923671563317918, guid: 8c532983607474be39c91f12faccbb6a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
